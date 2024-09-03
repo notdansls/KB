@@ -8,6 +8,6 @@
 
 ## Examples
 ### Registry
-```
+``` PowerShell
 Read-Host -Prompt "Hello"
 ```
