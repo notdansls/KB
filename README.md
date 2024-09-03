@@ -12,5 +12,5 @@ This is just a repository of my learnings over the years. Where possible I dump 
 [My Markdown Cheatsheet - star it if you like it][markdown-cheatsheet]
 Find some great docs [here][docs]
 
-[test](test)
+[test](test.md)
 
