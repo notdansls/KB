@@ -6,5 +6,6 @@ This is just a repository of my learnings over the years. Where possible I dump 
 
 
 
+[Vulnerabilities](vulnerabilities/index.md)
 [test](test.md)
 
