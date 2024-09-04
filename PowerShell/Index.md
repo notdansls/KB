@@ -5,6 +5,7 @@
 - Get File version
 - Registry
 - Ad User
+- [Ad-User](Index.md#ad-user)
 - Pending...
 
 
