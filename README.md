@@ -7,8 +7,7 @@ This is just a repository of my learnings over the years. Where possible I dump 
 ## Contents
 - [ ]  
 
- #### [Vulnerabilities](vulnerabilities/index.md)
-
-
-[test](test.md)
+## [Vulnerabilities](vulnerabilities/index.md)
+## [PowerShell stuff](powershell/index.md)
+## [test](test.md)
 
