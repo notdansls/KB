@@ -1,3 +1,14 @@
+> [Home](README.md) | **test** <
+
+# Test
+Just a drop page to see how code might work. A work in progress so to speak.
+
+### Contents
+- [01. Check WinGet](#01-Check-WinGet)
+
+
+
+### 01 Check WinGet
 Test code to check
 ```PowerShell
 function Get-UpgradableApps
