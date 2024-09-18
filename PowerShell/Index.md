@@ -6,8 +6,9 @@
 - [Get File version](#get-file-version)
 - Registry
 - Ad User
-- [Ad-User](Index.md#ad-user)
-- Pending...
+- [Ad-User](#ad-user)
+- [Install winget](#install-winget)
+- [SMB](#smb)
 
 
 ## Examples
@@ -83,5 +84,54 @@ Guid
 blah
 ```PowerShell
 Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+```
+
+
+### SMB
+SMB is used to annoy you. Remove version one to make it more secure
+Run the command `Get-SmbServerConfiguration | Select-Object EnableSMB1Protocol` to resolve a `True` to confirm SMB1 is enabled. 
+
+#### Example
+```PowerShell
+PS C:\Users\UserID> Get-SmbServerConfiguration | Select-Object EnableSMB1Protocol
+
+EnableSMB1Protocol
+------------------
+              True
+```
+You could also include EnableSMB2Protocol to ensure that a more secure version is enabled before disabling SMB1
+
+#### Example
+```PowerShell
+PS C:\Users\UserID> Get-SmbServerConfiguration | Select-Object EnableSMB1Protocol, EnableSMB2Protocol
+
+EnableSMB1Protocol EnableSMB2Protocol
+------------------ ------------------
+              True               True
+```
+
+Now we know its probably safe to disable SMB1
+
+we do this using the command `Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol`. This ensures it is using neither the client or the server version of SMB1
+
+#### Example
+```PowerShell
+PS C:\Users\UserID> Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
+Do you want to restart the computer to complete this operation now?
+[Y] Yes  [N] No  [?] Help (default is "Y"): n
+
+
+Path          :
+Online        : True
+RestartNeeded : True
+```
+A reboot will be required. Once Windows has rebooted you should get the following result
+#### Example
+```PowerShell
+PS C:\Users\CJ2ZE13A> Get-SmbServerConfiguration | Select-Object EnableSMB1Protocol, EnableSMB2Protocol
+
+EnableSMB1Protocol EnableSMB2Protocol
+------------------ ------------------
+                                 True
 ```
 
