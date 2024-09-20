@@ -5,7 +5,7 @@
 - Update Powershell
 - [Get File version](#get-file-version)
 - [Registry](#registry)
- - [Wintrust](#wintrust-check)
+   - [Wintrust](#wintrust-check)
 - Ad User
 - [Ad-User](#ad-user)
 - [Install winget](#install-winget)
