@@ -4,7 +4,7 @@
 ## Contents
 - Update Powershell
 - [Get File version](#get-file-version)
-- Registry
+- [Registry](#registry)
 - Ad User
 - [Ad-User](#ad-user)
 - [Install winget](#install-winget)
