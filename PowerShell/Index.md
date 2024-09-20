@@ -5,6 +5,7 @@
 - Update Powershell
 - [Get File version](#get-file-version)
 - [Registry](#registry)
+-   [Wintrust](#wintrust-check)
 - Ad User
 - [Ad-User](#ad-user)
 - [Install winget](#install-winget)
@@ -19,6 +20,48 @@ A guide how to update PowerShell [here](UpdatePS.md)
 Read-Host -Prompt "Hello"
 ```
 
+
+#### Wintrust check
+```PowerShell
+$wintrustKey64 = @{
+    Path = 'HKLM:\Software\Microsoft\Cryptography\Wintrust\Config'
+    Name = 'EnableCertPaddingCheck '
+    PropertyType = 'String'
+    Value = 1
+}
+New-ItemProperty @wintrustKey64
+```
+
+#### Check 64bit Wintrust
+```PowerShell
+$wintrustKey64Validation = "HKLM:\Software\Microsoft\Cryptography\Wintrust\"
+Get-ChildItem -Path $wintrustKey64Validation -Recurse
+```
+
+
+#### Wintrust check (Wow6432Node)
+```PowerShell
+$wintrustKey32 = @{
+    Path = 'HKLM:\Software\Wow6432Node\Microsoft\Cryptography\Wintrust\Config'
+    Name = 'EnableCertPaddingCheck '
+    PropertyType = 'String'
+    Value = 1
+}
+New-ItemProperty @wintrustKey32
+```
+
+#### Check 32bit Wintrust
+```PowerShell
+$wintrustKey32Validation = "HKLM:\Software\Microsoft\Cryptography\Wintrust\"
+Get-ChildItem -Path $wintrustKey32Validation -Recurse
+```
+
+
+<!--
+
+  Get file version starts here
+
+-->
 ### Get File version
 The command below gets the file version for a requested file.
 ```PowerShell
