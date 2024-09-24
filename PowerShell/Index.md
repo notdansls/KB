@@ -2,6 +2,7 @@
 # PowerShell
 
 ## Contents
+- [Projects](#projects)
 - Update Powershell
 - [Get File version](#get-file-version)
 - [Registry](#registry)
@@ -11,6 +12,9 @@
 - [Install winget](#install-winget)
 - [SMB](#smb)
 
+## Projects
+A collection of scripts I have created
+[PowerShell projects](projects.md)
 
 ## Examples
 ### Update Powershell
