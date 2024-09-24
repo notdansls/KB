@@ -3,6 +3,8 @@
 Just some projects I have created in my journy in learning PowerShell
 
 ## Contents
+- ##### [CleanOldFiles.ps1](#cleanoldfilesps1)
+        - Test
 - ##### [xyz](#project)
 
 ## [CleanOldFiles.ps1](CleanOldFiles.ps1)
