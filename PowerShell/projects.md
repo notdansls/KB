@@ -3,14 +3,24 @@
 Just some projects I have created in my journy in learning PowerShell
 
 ## Contents
-- ##### [CleanOldFiles.ps1](#cleanoldfilesps1)
-- ##### [Get-SamAccountName.ps1](#get-samaccountnameps1)
+- [CleanOldFiles.ps1](#cleanoldfilesps1)
+- [Get-SamAccountName.ps1](#get-samaccountnameps1)
+- [Set-RemovableDeviceWritable.ps1](#set-removabledevicewritableps1)
+
 
 ## [CleanOldFiles.ps1](CleanOldFiles.ps1)
+
 Script to review files within a folder and clears out files older than 1 month old.
 
+
 ## [Get-SamAccountName.ps1](Get-SamAccountName.ps1)
+
 This project allows you to enter a users name in plain text and the script will search and return the `SamAccountName`.
+
+
+## [Set-RemovableDeviceWritable.ps1](Set-RemovableDeviceWritable.ps1)
+
+A small script that will temporarly re-enable writing to external storage when disabled by policy. If bitlocker is enabled, this script will suspend it for the next reboot. 
 
 
 ## [Delete-ExitedUserCalendarEvents.ps1](Delete-ExitedUserCalendarEvents.ps1)
