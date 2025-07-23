@@ -13,7 +13,7 @@ Just some projects I have created in my journy in learning PowerShell
 - [Set-RemovableDeviceWritable.ps1](#set-removabledevicewritableps1)
 
 
-<a href="c"></>
+<a href="c"></a>
 ## [CleanOldFiles.ps1](CleanOldFiles.ps1)
 
 Script to review files within a folder and clears out files older than 1 month old.
