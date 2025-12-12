@@ -11,6 +11,7 @@ This is just a repository of my learnings over the years. Where possible I dump 
 
 
 ## [PowerShell stuff](PowerShell/Index.md)
+Some of the scripts I've used or played with. I still have alot I need to include
 
 
 ## [Vulnerabilities](vulnerabilities/index.md)
