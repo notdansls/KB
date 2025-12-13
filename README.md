@@ -5,6 +5,7 @@ This is just a repository of my learnings over the years. Where possible I dump 
 
 ## Contents
 - [Linux](#inux)
+- [Network Traffic Analysis](#network-traffic-analysis)
 - [Phishing](#phishing)
 - [PowerShell](#powershell-stuff)
 - [Vulnerabilities](#vulnerabilities)
@@ -22,3 +23,6 @@ Some of the scripts I've used or played with. I still have alot I need to includ
 
 ## [Phishing](Phishing/index.md)
 A small repository of stuff relating to SEC Ops, specifically relating to phishing analysis.
+
+## [Network Traffic Analysis](NTA/index.md)
+Some tools used in network analysis
