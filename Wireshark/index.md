@@ -21,7 +21,10 @@
     - [Comparison Operators](#comparison-operators)
     - [Logical Expressions](#logical-expressions)
     - [Packet Filter Toolbar](#packet-filter-toolbar)
-
+    - [TCP and UDP Filters](#tcp-and-udp-filters)
+    - [Application Level Protocol Filters](#application-level-protocol-filters)
+      - [HTTP (Example)](#http-example)
+      - [DNS (Example)](#dns-example)
 
 ## Stastics
 ### Resolved Addresses
@@ -176,3 +179,37 @@ Capture filters filter by the `byte offset haex values`. To implement the filter
 - Green = Good
 - Red = Invalid
 - Yellow = Warning
+
+#### Protocol Filters
+##### IP Filters
+Some common IP filters below
+- `ip` (show all packets)
+- `ip.addr == 10.10.10.10` (All packets matching `10.10.10.10`)
+- `ip.addr == 10.10.10.0/24` (Match all packets within the subnet `10.10.10.0/24`)
+- `ip.src == 10.10.10.10` (Match packets where ip `10.10.10.10` is the source)
+- `ip.dst == 10.10.10.10` (Match packets where IP `10.10.10.10` is the destination)
+
+##### TCP and UDP Filters
+Some common protol filters
+- `tcp.port == 80` (Show all TCP `80` ports)
+- `tcp.srcport == 443` (Show all TCP source ports `443`)
+- `tcp.dstport == 53` (Show all TCP destination ports `53`)
+- `udp.port == 53` (Show all UDP `53` ports)
+- `udp.srcport == 63553` (Show all UDP destination `63553` traffic)
+- `udp.dstport == 5353` (Show all UDP source `5353` traffic)
+
+##### Application Level Protocol Filters
+###### HTTP (Example)
+- `http` shows all HTTP packets
+- `http.response.code == 200` will show all `200` respponse codes
+- `http.request.method == "GET"` will show all `GET` reuestes
+- `http.request.method == "POST"` will show all `POST` requests
+
+###### DNS (Example)
+- `dns` will show all `dns` packets
+- `dns.flag.response == 0` show all `dns` requests
+- `dns.flags.response == 1` show all `dns` responses
+- `dns.qry.type == 1` will show all `dns A` records
+
+##### Display Filter Expressions
+There is a full list of expressions under **Analyze** followed by **Display Filter Expression...**
