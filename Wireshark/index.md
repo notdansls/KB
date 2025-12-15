@@ -15,6 +15,12 @@
     - Source and Destination Addresses - [(v4)](#source-and-destination-addresses-v4) / [(v6)](#source-and-destination-addresses-v6)
   - [Protocol Hierarchy](#protocol-hierarchy)
   - [Resolved Addresses](#resolved-addresses)
+- [Packet Filtering](#packet-filtering)
+  - [Capture Filter Syntax](#capture-filter-syntax)
+  - [Display Filter Syntax](#display-filter-syntax)
+    - [Comparison Operators](#comparison-operators)
+    - [Logical Expressions](#logical-expressions)
+    - [Packet Filter Toolbar](#packet-filter-toolbar)
 
 
 ## Stastics
@@ -115,3 +121,58 @@ This gives us stats grouped by requests or responses.
 We can view _request sequences_ by clicking **Stastics**, expanding **HTTP** followed by clicking **Request Sequences**
 
 This gives us a break down of requests and their sequence.
+
+
+## Packet Filtering
+### Capture Filter Syntax
+Capture filters filter by the `byte offset haex values`. To implement the filter click **Capture**, **Capture Filters...**. Select or create a filter and click **OK**.
+- Scope:
+  - host
+  - net
+  - port
+  - port range
+- Direction:
+  - src
+  - dst
+  - src or dst
+  - src and dst
+- Protocol:
+  - ether
+  - wlan
+  - ip
+  - ip6
+  - arp
+  - rarp
+  - tcp
+  - udp
+- Example:
+  - tcp port 22
+
+### Display Filter Syntax
+**Note**: You can see the full _Display Filter_ reference at https://www.wireshark.org/docs/dfref/
+#### Comparison Operators
+- Equal (`eq` / `==`)
+  - Example: `ip.src == 127.0.0.1`
+- Not Equal (`ne` / `!=`)
+  - Example: `ip.src != 192.168.1.254`
+- Greater than (`gt` / `>`)
+  - Example: `ip.leng > 100`
+- Less than (`lt` / `<`)
+  - Example: `ip.ttl < 10`
+- Greater than or equal to (`ge` / `>=`)
+  - Example: `ip.ttl >= 0xFA`
+- Less than or equal to (`le` / `<=`)
+  - Example: `ip.ttl <= 0xA`
+
+#### Logical Expressions
+- and (`AND` / `&&`)
+  - Example: `(ip.src == 192.168.1.1) && (ip.src == 192.168.1.254)`
+- or (`or` / `||`)
+  - Example: `(ip.src == 10.10.10.1) || (ip.src 10.10.10.2)`
+- not (`not` / `!`)
+  - Example: `!(ip.src == 10.10.10.3)`
+
+#### Packet Filter Toolbar
+- Green = Good
+- Red = Invalid
+- Yellow = Warning
