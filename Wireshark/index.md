@@ -1,7 +1,13 @@
 ## Contents
 - [Stastics](#stastics)
   - [Conversations](#conversations)
+  - [DNS](#dns)
   - [Endpoints](#endpoints)
+  - [HTTP](#http)
+    - [Packet Counter](#packet-counter)
+    - [Requests](#requests)
+    - [Load Distribution](#load-distribution)
+    - [Request Sequences](#request-sequences)
   - [IPv4 and IPv6](#ipv4-and-ipv6)
     - All Addresses - [(v4)](#all-addresses-v4) / [(v6)](#all-addresses-v6)
     - Destinations and Ports - [(v4)](#destinations-and-ports-v4) / [(v6)](#destinations-and-ports-v6)
@@ -79,9 +85,33 @@ We can view all _IP protocol types_ by clicking clicking **Stastics**, expanding
 
 Here we can see the summary of protocols in use.
 
-##### Source and Destination Addresses (v46)
+##### Source and Destination Addresses (v6)
 We can view all _source and destination addresses_ by clicking clicking **Stastics**, expanding **IPv6 Stastics** followed by **Source and Destination Addresses**.
 
 This gives us counts seperated by source or destination. 
 
 ### DNS
+We can view _DNS_ queries by clicking **Stastics** followed by **DNS**.
+
+Gives us a Breakdown by DNS actions sorted by %.
+
+### HTTP
+#### Packet Counter
+We can view _HTTP pakcet counter_ by clicking **Stastics**, expanding **HTTP** followed by clicking **Packet Counter**
+
+This gives us a view of packets attributed to various HTTP responses.
+
+#### Requests
+We can view _HTTP requests_ by clicking **Stastics**, expanding **HTTP** followed by clicking **Requests**
+
+This gives us a view of http requests by host.
+
+#### Load Distribution
+We can view _load distribution_ by clicking **Stastics**, expanding **HTTP** followed by clicking **Load Distribution**
+
+This gives us stats grouped by requests or responses.
+
+#### Request Sequences
+We can view _request sequences_ by clicking **Stastics**, expanding **HTTP** followed by clicking **Request Sequences**
+
+This gives us a break down of requests and their sequence.
