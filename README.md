@@ -9,6 +9,7 @@ This is just a repository of my learnings over the years. Where possible I dump 
 - [Phishing](#phishing)
 - [PowerShell](#powershell-stuff)
 - [Vulnerabilities](#vulnerabilities)
+- [Wireshark](#wireshark)
 
 
 ## [PowerShell stuff](PowerShell/Index.md)
@@ -26,3 +27,6 @@ A small repository of stuff relating to SEC Ops, specifically relating to phishi
 
 ## [Network Traffic Analysis](NTA/index.md)
 Some tools used in network analysis
+
+## [Wireshark](Wireshark/index.md)
+usefull bits for wireshark
