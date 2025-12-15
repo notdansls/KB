@@ -25,6 +25,14 @@
     - [Application Level Protocol Filters](#application-level-protocol-filters)
       - [HTTP (Example)](#http-example)
       - [DNS (Example)](#dns-example)
+  - [Advanced Filtering](#advanced-filtering)
+    - [contains](#contains)
+    - [matches](#matches)
+    - [in](#in)
+    - [upper](#upper)
+    - [lower](#lower)
+    - [string](#string)
+    - [Bookmarks and Filtering Buttons](#bookmarks-and-filtering-buttons)
 
 ## Stastics
 ### Resolved Addresses
@@ -213,3 +221,25 @@ Some common protol filters
 
 ##### Display Filter Expressions
 There is a full list of expressions under **Analyze** followed by **Display Filter Expression...**
+
+## Advanced Filtering
+### contains
+Example: `http.server contains "IIS"`
+
+### matches
+Example: `http.post matches "\.(php||html)"`
+
+### in
+Example: `tcp.port in {53, 5353}`
+
+### upper
+Example: `upper(http.server) contains "APACHE"`
+
+### lower
+Example: `lower(http.server) contains "php"`
+
+### string
+Example: `string(frame.number) matches "[13579]$`
+
+### Bookmarks and Filtering Buttons
+Create filter, click book mark item and click **save this filter**. Double click _New display filter_ and give it a great name.
